@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Base", "TripYatri.Core.Base\TripYari.Core.Base.csproj", "{7668F375-3D39-4FEC-9325-0434736B4082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYatri.Core.Data", "TripYatri.Core.Data\TripYatri.Core.Data.csproj", "{EC81FDB6-E15D-4040-B3B6-4DAA5E022C9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYatri.Core.Data.DbMigrations", "TripYatri.Core.Data.DbMigrations\TripYatri.Core.Data.DbMigrations.csproj", "{3786B54D-FF45-44B4-A25F-52861862E2F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYatri.Core.API", "TripYatri.Core.API\TripYatri.Core.API.csproj", "{246B2F29-726C-47DD-9EAF-69553C1DD71D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7668F375-3D39-4FEC-9325-0434736B4082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7668F375-3D39-4FEC-9325-0434736B4082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7668F375-3D39-4FEC-9325-0434736B4082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7668F375-3D39-4FEC-9325-0434736B4082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC81FDB6-E15D-4040-B3B6-4DAA5E022C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC81FDB6-E15D-4040-B3B6-4DAA5E022C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC81FDB6-E15D-4040-B3B6-4DAA5E022C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC81FDB6-E15D-4040-B3B6-4DAA5E022C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3786B54D-FF45-44B4-A25F-52861862E2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3786B54D-FF45-44B4-A25F-52861862E2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3786B54D-FF45-44B4-A25F-52861862E2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3786B54D-FF45-44B4-A25F-52861862E2F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246B2F29-726C-47DD-9EAF-69553C1DD71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246B2F29-726C-47DD-9EAF-69553C1DD71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246B2F29-726C-47DD-9EAF-69553C1DD71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246B2F29-726C-47DD-9EAF-69553C1DD71D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36AC34A7-5C9F-472A-BDE9-BDE13D673FB2}
+	EndGlobalSection
+EndGlobal

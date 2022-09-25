@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>TripYatri.Core.Base.Core</AssemblyName>
+    <RootNamespace>TripYatri.Core.Base</RootNamespace>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.CloudWatch" Version="3.7.2.45" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.3.29" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.3.22" />
+    <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.0.12" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.1.32" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.14" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Diagnostics.Debug" Version="4.3.0" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.IO.FileSystem.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
+    <PackageReference Include="System.Runtime.Handles" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
+    <PackageReference Include="System.Threading" Version="4.3.0" />
+    <PackageReference Include="SparkPost.DotNetCore" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Providers\Emails\" />
+    <None Remove="SparkPost.DotNetCore" />
+    <None Remove="Models\" />
+  </ItemGroup>
+</Project>

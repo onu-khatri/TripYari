@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>TripYatri.Core.API</RootNamespace>
+    <UserSecretsId>55d86115-67e0-4444-bd1c-d31e751e41fa</UserSecretsId>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jose-jwt" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="3.1.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization.Policy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="System.IO.FileSystem.Primitives" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210528113900_sp_export_audit_log_daily.sql" />
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210528114000_export_audit_log_daily_event.sql" />
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210527141600_create_request_audit_log.sql" />
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210602113400_add_request_audit_log_build_version.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SparkPost.DotNetCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TripYatri.Core.Base\TripYari.Core.Base.csproj" />
+    <ProjectReference Include="..\TripYatri.Core.Data\TripYatri.Core.Data.csproj" />
+  </ItemGroup>
+</Project>
