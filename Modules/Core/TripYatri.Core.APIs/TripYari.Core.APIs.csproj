@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DbMigrations\AuditWriter\20210527141600_create_request_audit_log.sql" />
+    <None Remove="DbMigrations\AuditWriter\20210528113900_sp_export_audit_log_daily.sql" />
+    <None Remove="DbMigrations\AuditWriter\20210528114000_export_audit_log_daily_event.sql" />
+    <None Remove="DbMigrations\AuditWriter\20210602113400_add_request_audit_log_build_version.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210527141600_create_request_audit_log.sql" />
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210528113900_sp_export_audit_log_daily.sql" />
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210528114000_export_audit_log_daily_event.sql" />
+    <EmbeddedResource Include="DbMigrations\AuditWriter\20210602113400_add_request_audit_log_build_version.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jose-jwt" Version="4.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization.Policy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TripYatri.Core.Bases\TripYari.Core.Bases.csproj" />
+    <ProjectReference Include="..\TripYatri.Core.Data\TripYari.Core.Data.csproj" />
+  </ItemGroup>
+
+</Project>
