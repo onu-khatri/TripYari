@@ -8,13 +8,13 @@ namespace TripYari.Core.Loggers
         #region Members
 
         private static readonly object Lock = new object();
-        private readonly RuntimeContextProvider _runtimeContext;
+        private readonly IRuntimeContextProvider _runtimeContext;
 
         #endregion
 
         #region Constructor
 
-        public ConsoleLogger(RuntimeContextProvider runtimeContext)
+        public ConsoleLogger(IRuntimeContextProvider runtimeContext)
             : base(runtimeContext)
         {
             _runtimeContext = runtimeContext;

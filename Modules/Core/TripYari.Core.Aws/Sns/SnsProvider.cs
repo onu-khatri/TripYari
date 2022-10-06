@@ -11,13 +11,13 @@ namespace TripYari.Core.Aws.Sns
     {
         private static AmazonSimpleNotificationServiceClient _snsClient;
 
-        private readonly RuntimeContextProvider _runtimeContext;
+        private readonly IRuntimeContextProvider _runtimeContext;
         private readonly ILogger _logger;
         private IAmazonSimpleNotificationService SnsClient => _snsClient ??= new AmazonSimpleNotificationServiceClient();
 
         public SnsProvider(
             ILogger logger,
-            RuntimeContextProvider runtimeContext)
+            IRuntimeContextProvider runtimeContext)
         {
             _runtimeContext = runtimeContext;
             _logger = logger;

@@ -6,9 +6,9 @@ namespace TripYari.Core.Aws.Queue
     public class ConsoleQueueProvider : IQueueProvider
     {
         private readonly ILogger _logger;
-        private readonly RuntimeContextProvider _runtimeContext;
+        private readonly IRuntimeContextProvider _runtimeContext;
 
-        public ConsoleQueueProvider(ILogger logger, RuntimeContextProvider runtimeContext)
+        public ConsoleQueueProvider(ILogger logger, IRuntimeContextProvider runtimeContext)
         {
             _logger = logger;
             _runtimeContext = runtimeContext;

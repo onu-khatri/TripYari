@@ -8,11 +8,11 @@ namespace TripYari.Core.Aws.Sns
     public class ConsoleSnsProvider : ISnsProvider
     {
         private readonly ILogger _logger;
-        private readonly RuntimeContextProvider _runtimeContext;
+        private readonly IRuntimeContextProvider _runtimeContext;
 
         public ConsoleSnsProvider(
             ILogger logger,
-            RuntimeContextProvider runtimeContext)
+            IRuntimeContextProvider runtimeContext)
         {
             _logger = logger;
             _runtimeContext = runtimeContext;

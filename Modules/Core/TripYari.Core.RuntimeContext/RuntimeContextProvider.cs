@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace TripYari.Core.RuntimeContext
 {
-    public class RuntimeContextProvider
+    public class RuntimeContextProvider : IRuntimeContextProvider
     {
         private int _logicalClock;
         private string RequestId { get; set; } = "_";

@@ -11,7 +11,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
 {
     public class CloudWatchMetricsProvider : IMetricsProvider
     {
-        private readonly RuntimeEnvironment _runtimeEnvironment;
+        private readonly IRuntimeContextProvider _runtimeEnvironmentProvider;
         private readonly CloudWatchMetricsOptions _options;
         private readonly Random _random = new Random();
         private readonly object _syncObject = new object();
@@ -19,16 +19,16 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
         private readonly Timer _flushTimer;
         private readonly IAmazonCloudWatch _amazonCloudWatch;
 
-        public CloudWatchMetricsProvider(RuntimeEnvironment runtimeEnvironment,
+        public CloudWatchMetricsProvider(IRuntimeContextProvider runtimeEnvironmentProvider,
             IOptions<CloudWatchMetricsOptions> options, IAmazonCloudWatch amazonCloudWatch)
-            : this(runtimeEnvironment, options, amazonCloudWatch, TimeSpan.FromSeconds(30))
+            : this(runtimeEnvironmentProvider, options, amazonCloudWatch, TimeSpan.FromSeconds(30))
         {
         }
 
-        public CloudWatchMetricsProvider(RuntimeEnvironment runtimeEnvironment,
+        public CloudWatchMetricsProvider(IRuntimeContextProvider runtimeEnvironmentProvider,
             IOptions<CloudWatchMetricsOptions> options, IAmazonCloudWatch amazonCloudWatch, TimeSpan flushPeriod)
         {
-            _runtimeEnvironment = runtimeEnvironment;
+            _runtimeEnvironmentProvider = runtimeEnvironmentProvider;
             _options = options?.Value ?? new CloudWatchMetricsOptions();
             _amazonCloudWatch = amazonCloudWatch;
             _metrics = new List<Metric>(100);
@@ -171,7 +171,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
                                             Dimensions = new List<Dimension>
                                             {
                                                 new Dimension
-                                                    {Name = "Environment", Value = _runtimeEnvironment.ToString()},
+                                                    {Name = "Environment", Value = _runtimeEnvironmentProvider.ToString()},
                                                 new Dimension
                                                 {
                                                     Name = "Type",
@@ -203,7 +203,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
                                             Dimensions = new List<Dimension>
                                             {
                                                 new Dimension
-                                                    {Name = "Environment", Value = _runtimeEnvironment.ToString()},
+                                                    {Name = "Environment", Value = _runtimeEnvironmentProvider.ToString()},
                                                 new Dimension
                                                 {
                                                     Name = "Type",
@@ -251,7 +251,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
                                         Dimensions = new List<Dimension>
                                         {
                                             new Dimension
-                                                {Name = "Environment", Value = _runtimeEnvironment.ToString()},
+                                                {Name = "Environment", Value = _runtimeEnvironmentProvider.ToString()},
                                             new Dimension
                                             {
                                                 Name = "Type",
@@ -288,7 +288,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
                                         Dimensions = new List<Dimension>
                                         {
                                             new Dimension
-                                                {Name = "Environment", Value = _runtimeEnvironment.ToString()},
+                                                {Name = "Environment", Value = _runtimeEnvironmentProvider.ToString()},
                                             new Dimension
                                             {
                                                 Name = "Type",
@@ -338,7 +338,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
             }
             catch (Exception ex)
             {
-                var logger = new ConsoleLogger(new RuntimeContextProvider(_runtimeEnvironment));
+                var logger = new ConsoleLogger(_runtimeEnvironmentProvider);
                 logger.LogError("Error while publishing AWS Custom Time Metrics", ex);
             }
         }

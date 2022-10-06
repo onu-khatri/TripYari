@@ -1,26 +1,15 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
 using System.Text.Json;
-using TripYari.Core.Metrics;
-using TripYari.Core.Loggers;
-using TripYari.Core.RuntimeContext;
 
 namespace TripYari.Core.Aws.S3
 {
     public class LocalS3Provider : IS3Provider
     {
-        private readonly RuntimeEnvironment _runtimeEnvironment;
-        private readonly IMetricsProvider _metricsProvider;
-        private readonly ILogger _logger;
         private readonly string LOCAL_DRIVE = Path.GetTempPath();
 
-        public LocalS3Provider(
-            RuntimeEnvironment runtimeEnvironment,
-            IMetricsProvider metricsProvider, ILogger logger)
+        public LocalS3Provider()
         {
-            _runtimeEnvironment = runtimeEnvironment;
-            _metricsProvider = metricsProvider;
-            _logger = logger;
         }
 
         public Task<DeleteObjectsResponse> DeleteObjectsAsync(string bucket, IEnumerable<string> keys)

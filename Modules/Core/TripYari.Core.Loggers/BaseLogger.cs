@@ -7,7 +7,7 @@ namespace TripYari.Core.Loggers
 {
     public abstract class BaseLogger : ILogger
     {
-        private readonly RuntimeContextProvider _runtimeContext;
+        private readonly IRuntimeContextProvider _runtimeContext;
 
         #region Members
 
@@ -17,7 +17,7 @@ namespace TripYari.Core.Loggers
 
         #region Constructor
 
-        public BaseLogger(RuntimeContextProvider runtimeContext)
+        public BaseLogger(IRuntimeContextProvider runtimeContext)
         {
             _runtimeContext = runtimeContext;
             SerializerSettings = new JsonSerializerOptions

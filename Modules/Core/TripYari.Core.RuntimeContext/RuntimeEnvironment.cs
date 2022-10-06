@@ -4,14 +4,14 @@ namespace TripYari.Core.RuntimeContext
 {
     public class RuntimeEnvironment
     {
-        public static RuntimeEnvironment produs { get; } = new RuntimeEnvironment("produs", "api.careerbuilder.com");
-        public static RuntimeEnvironment prodeu { get; } = new RuntimeEnvironment("prodeu", "api.careerbuilder.eu");
+        public static RuntimeEnvironment produs { get; } = new RuntimeEnvironment("produs", "api.TripYari.com");
+        public static RuntimeEnvironment prodeu { get; } = new RuntimeEnvironment("prodeu", "api.TripYari.eu");
 
         public static RuntimeEnvironment stage { get; } =
-            new RuntimeEnvironment("stage", "wwwtest.api.careerbuilder.com");
+            new RuntimeEnvironment("stage", "testapi.TripYari.com");
 
         public static RuntimeEnvironment development { get; } =
-            new RuntimeEnvironment("development", "wwwtest.api.careerbuilder.com");
+            new RuntimeEnvironment("development", "testapi.TripYari.com");
 
         public static RuntimeEnvironment FromName(string environmentName)
         {

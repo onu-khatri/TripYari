@@ -13,7 +13,7 @@ namespace TripYari.Core.Aws.Queue
     {
         private readonly IMetricsProvider _metricsProvider;
         private readonly ILogger _logger;
-        private readonly RuntimeContextProvider _runtimeContext;
+        private readonly IRuntimeContextProvider _runtimeContext;
         private readonly AmazonSQSClient _sqsClient;
 
         private static readonly Regex SqsBatchEntryIdValidCharacters =
@@ -22,7 +22,7 @@ namespace TripYari.Core.Aws.Queue
         public SqsQueueProvider(
             IMetricsProvider metricsProvider,
             ILogger logger,
-            RuntimeContextProvider runtimeContext)
+            IRuntimeContextProvider runtimeContext)
         {
             _metricsProvider = metricsProvider;
             _logger = logger;
