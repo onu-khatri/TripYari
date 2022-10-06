@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Base", "TripYari.Core.Base\TripYari.Core.Base.csproj", "{DBA3B408-DA8E-4F3D-A420-75FEF44FC18E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Data", "TripYari.Core.Data\TripYari.Core.Data.csproj", "{03228D80-B222-4090-8EC4-EE2AACB5E959}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Extensions", "TripYari.Core.Extensions\TripYari.Core.Extensions.csproj", "{C7C4E854-4721-48BB-9773-AB7988C2A225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.RuntimeContext", "TripYari.Core.RuntimeContext\TripYari.Core.RuntimeContext.csproj", "{CAC3889E-2FAB-4CA5-B627-D71313E52E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Loggers", "TripYari.Core.Loggers\TripYari.Core.Loggers.csproj", "{8C222760-0553-4233-A010-6D797C1B7637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Aws", "TripYari.Core.Aws\TripYari.Core.Aws.csproj", "{E0037057-D674-4F49-97D0-4D83C8E0A0B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Matrics", "TripYari.Core.Matrics\TripYari.Core.Matrics.csproj", "{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBA3B408-DA8E-4F3D-A420-75FEF44FC18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA3B408-DA8E-4F3D-A420-75FEF44FC18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA3B408-DA8E-4F3D-A420-75FEF44FC18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA3B408-DA8E-4F3D-A420-75FEF44FC18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03228D80-B222-4090-8EC4-EE2AACB5E959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03228D80-B222-4090-8EC4-EE2AACB5E959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03228D80-B222-4090-8EC4-EE2AACB5E959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03228D80-B222-4090-8EC4-EE2AACB5E959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C4E854-4721-48BB-9773-AB7988C2A225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C4E854-4721-48BB-9773-AB7988C2A225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C4E854-4721-48BB-9773-AB7988C2A225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C4E854-4721-48BB-9773-AB7988C2A225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC3889E-2FAB-4CA5-B627-D71313E52E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC3889E-2FAB-4CA5-B627-D71313E52E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC3889E-2FAB-4CA5-B627-D71313E52E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC3889E-2FAB-4CA5-B627-D71313E52E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C222760-0553-4233-A010-6D797C1B7637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C222760-0553-4233-A010-6D797C1B7637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C222760-0553-4233-A010-6D797C1B7637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C222760-0553-4233-A010-6D797C1B7637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0037057-D674-4F49-97D0-4D83C8E0A0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0037057-D674-4F49-97D0-4D83C8E0A0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0037057-D674-4F49-97D0-4D83C8E0A0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0037057-D674-4F49-97D0-4D83C8E0A0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B42F122-6DD7-4B12-99F7-B30F3E56E8D9}
+	EndGlobalSection
+EndGlobal
