@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Data", "TripY
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Extensions", "TripYari.Core.Extensions\TripYari.Core.Extensions.csproj", "{C7C4E854-4721-48BB-9773-AB7988C2A225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.RuntimeContext", "TripYari.Core.RuntimeContext\TripYari.Core.RuntimeContext.csproj", "{CAC3889E-2FAB-4CA5-B627-D71313E52E59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.RuntimeContext", "TripYari.Core.RuntimeContext\TripYari.Core.RuntimeContext.csproj", "{CAC3889E-2FAB-4CA5-B627-D71313E52E59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Loggers", "TripYari.Core.Loggers\TripYari.Core.Loggers.csproj", "{8C222760-0553-4233-A010-6D797C1B7637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Loggers", "TripYari.Core.Loggers\TripYari.Core.Loggers.csproj", "{8C222760-0553-4233-A010-6D797C1B7637}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Aws", "TripYari.Core.Aws\TripYari.Core.Aws.csproj", "{E0037057-D674-4F49-97D0-4D83C8E0A0B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Aws", "TripYari.Core.Aws\TripYari.Core.Aws.csproj", "{E0037057-D674-4F49-97D0-4D83C8E0A0B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Matrics", "TripYari.Core.Matrics\TripYari.Core.Matrics.csproj", "{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Metrics", "TripYari.Core.Metrics\TripYari.Core.Metrics.csproj", "{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

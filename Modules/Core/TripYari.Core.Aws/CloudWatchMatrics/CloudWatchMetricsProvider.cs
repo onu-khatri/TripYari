@@ -327,7 +327,7 @@ namespace TripYari.Core.Aws.CloudWatchMetrics
                         var awsPutMetricDataRequest = new PutMetricDataRequest
                         {
                             MetricData = awsMetricGroup.Select(a => a.Metric).ToList(),
-                            Namespace = $"cds.{_options.Application}"
+                            Namespace = $"TripYari.{_options.Application}"
                         };
 
                         asyncTasks.Add(_amazonCloudWatch.PutMetricDataAsync(awsPutMetricDataRequest));

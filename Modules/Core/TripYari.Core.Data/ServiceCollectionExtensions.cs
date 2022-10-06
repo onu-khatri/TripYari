@@ -4,7 +4,7 @@ using TripYari.Core.Data.Domain;
 
 namespace TripYari.Core.Data
 {
-    public static class ComponentProviderCollectionExtensions
+    public static class ServiceCollectionExtensions
     {
 
         public static IServiceCollection AddAllBaseRepositories<TEntity, key>(this IServiceCollection services)
