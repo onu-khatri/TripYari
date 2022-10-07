@@ -1,16 +1,10 @@
 ﻿using Amazon.CloudWatch;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TripYari.Core.Aws.CloudWatchMetrics;
 using TripYari.Core.Aws.Queue;
 using TripYari.Core.Aws.S3;
 using TripYari.Core.Aws.Sns;
-using TripYari.Core.Loggers;
 using TripYari.Core.Metrics;
 using TripYari.Core.RuntimeContext;
 

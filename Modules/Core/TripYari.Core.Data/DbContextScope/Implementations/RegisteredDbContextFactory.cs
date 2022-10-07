@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TripYari.Core.Data.DbContexts;
+﻿using TripYari.Core.Data.DbContexts;
 
 namespace TripYari.Core.Data.DataContextScope.Entity
 {

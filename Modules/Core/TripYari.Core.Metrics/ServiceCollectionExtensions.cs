@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TripYari.Core.RuntimeContext;
 
 namespace TripYari.Core.Metrics
 {
