@@ -1,11 +1,21 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TripYari.Core.Data.Repository;
 using TripYari.Core.Data.Domain;
+using TripYari.Core.Data.DataContextScope.Entity;
+using TripYari.Core.Data.DbContexts;
 
 namespace TripYari.Core.Data
 {
     public static class ServiceCollectionExtensions
     {
+        public static IServiceCollection AddDbContext(this IServiceCollection services)
+        {
+            var dbContextFactory = new RegisteredDbContextFactory();
+            services.AddScoped<IUnitOfDbContext, UnitOfDbContext>();
+            services.AddSingleton<IAmbientDbContextLocator, AmbientDbContextLocator>();
+            services.AddSingleton<IDbContextFactory>(dbContextFactory);
+            return services;
+        }
 
         public static IServiceCollection AddAllBaseRepositories<TEntity, key>(this IServiceCollection services)
         where TEntity : EntityBase<key>
