@@ -17,10 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="DbContextScope\DbContextScope.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="DbContextScope\DbContextScope.csproj" />
+    <ProjectReference Include="..\TripYari.Core.Data.Abstraction\TripYari.Core.Data.Abstraction.csproj" />
   </ItemGroup>
 
 </Project>

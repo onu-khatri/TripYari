@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using TripYari.Core.Data.DbContexts;
-using TripYari.Core.Data.Domain;
+using TripYari.Core.Data.Abstraction.DbContexts;
+using TripYari.Core.Data.Abstraction.Domain;
+using TripYari.Core.Data.Abstraction.Repository;
 using TripYari.Core.Data.Extenstion;
 
 namespace TripYari.Core.Data.Repository

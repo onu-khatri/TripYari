@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TripYari.Core.Data.Abstraction.DbContexts;
 
 namespace TripYari.Core.Data.DbContexts
 {

@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Aws", "TripYa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripYari.Core.Metrics", "TripYari.Core.Metrics\TripYari.Core.Metrics.csproj", "{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripYari.Core.Data.Abstraction", "TripYari.Core.Data.Abstraction\TripYari.Core.Data.Abstraction.csproj", "{6DA7373A-59DD-4575-A65D-34E7E5C3BD36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4395A90-B0EC-4822-A4B2-96CE7FD3AC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA7373A-59DD-4575-A65D-34E7E5C3BD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA7373A-59DD-4575-A65D-34E7E5C3BD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA7373A-59DD-4575-A65D-34E7E5C3BD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA7373A-59DD-4575-A65D-34E7E5C3BD36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
