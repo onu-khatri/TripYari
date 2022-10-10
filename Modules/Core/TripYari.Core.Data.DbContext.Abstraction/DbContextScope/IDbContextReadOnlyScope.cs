@@ -1,4 +1,4 @@
-﻿namespace TripYari.Core.Data.Abstraction.DataContextScope
+﻿namespace TripYari.Core.Data.DbContexts.Abstraction.DataContextScope
 {
     /// <summary>
     /// A read-only DbContextScope. Refer to the comments for IDbContextScope

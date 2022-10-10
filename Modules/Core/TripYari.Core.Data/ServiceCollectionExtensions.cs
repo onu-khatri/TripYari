@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TripYari.Core.Data.Repository;
 using TripYari.Core.Data.DbContexts;
-using TripYari.Core.Data.Abstraction.DbContexts;
-using TripYari.Core.Data.Abstraction.DataContextScope;
+using TripYari.Core.Data.DbContexts.Abstraction;
+using TripYari.Core.Data.DbContexts.Abstraction.DataContextScope;
 using TripYari.Core.Data.Abstraction.Domain;
 using TripYari.Core.Data.DbContextScope;
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace TripYari.Core.Data.Abstraction.DataContextScope
+namespace TripYari.Core.Data.DbContexts.Abstraction.DataContextScope
 {
     /// <summary>
     /// Creates and manages the DbContext instances used by this code block.

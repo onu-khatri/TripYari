@@ -1,6 +1,6 @@
-﻿using TripYari.Core.Data.Abstraction.DbContexts;
+﻿using TripYari.Core.Data.DbContexts.Abstraction;
 
-namespace TripYari.Core.Data.Abstraction.DataContextScope
+namespace TripYari.Core.Data.DbContexts.Abstraction.DataContextScope
 {
     /// <summary>
     /// Factory for DbContext-derived classes that don't expose

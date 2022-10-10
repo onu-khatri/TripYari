@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TripYari.Core.Data.Abstraction\TripYari.Core.Data.Abstraction.csproj" />
+    <ProjectReference Include="..\TripYari.Core.Data.DbContext.Abstraction\TripYari.Core.Data.DbContexts.Abstraction.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿using TripYari.Core.Data.Abstraction.DbContexts;
+﻿using TripYari.Core.Data.DbContexts.Abstraction;
 
-namespace TripYari.Core.Data.Abstraction.DataContextScope
+namespace TripYari.Core.Data.DbContexts.Abstraction.DataContextScope
 {
     /// <summary>
     /// Convenience methods to retrieve ambient DbContext instances.

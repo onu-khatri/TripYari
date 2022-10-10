@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Linq.Expressions;
-using TripYari.Core.Data.Abstraction.DbContexts;
 using TripYari.Core.Data.Abstraction.Domain;
 using TripYari.Core.Data.Abstraction.Repository;
+using TripYari.Core.Data.DbContexts.Abstraction;
 using TripYari.Core.Data.Extenstion;
 
 namespace TripYari.Core.Data.Repository
@@ -26,8 +26,6 @@ namespace TripYari.Core.Data.Repository
         public void AddRange(IEnumerable<T> items) => Set.AddRange(items);
 
         public Task AddRangeAsync(IEnumerable<T> items) => Set.AddRangeAsync(items);
-
-        public async Task<EntityEntry<T>> AddWithReturnAsync(T item) => await Set.AddAsync(item);
 
         public void Save()
         {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Collections;
 using System.Data;
-using TripYari.Core.Data.Abstraction.DataContextScope;
+using TripYari.Core.Data.DbContexts.Abstraction.DataContextScope;
 
 namespace TripYari.Core.Data.DbContextScope
 {

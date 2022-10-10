@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Linq.Expressions;
 
 namespace TripYari.Core.Data.Abstraction.Repository;
@@ -34,6 +33,5 @@ public interface ICommandRepository<T> where T : class
     void SoftDelete(object key);
     Task SoftDeleteAsync(Expression<Func<T  , bool>> where);
     Task SoftDeleteAsync(object key);
-    Task<EntityEntry<T>> AddWithReturnAsync(T item);
     Task<T> UpdateFromResultAsync(T entity);
 }

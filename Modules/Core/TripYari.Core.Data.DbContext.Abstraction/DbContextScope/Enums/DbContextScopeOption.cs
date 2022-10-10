@@ -1,4 +1,4 @@
-﻿namespace TripYari.Core.Data.Abstraction.DataContextScope
+﻿namespace TripYari.Core.Data.DbContexts.Abstraction.DataContextScope
 {
     /// <summary>
     /// Indicates whether or not a new DbContextScope will join the ambient scope.

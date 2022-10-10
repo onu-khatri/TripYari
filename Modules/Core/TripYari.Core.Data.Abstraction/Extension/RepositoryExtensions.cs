@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TripYari.Core.Data.Abstraction.Domain;
 using TripYari.Core.Data.Abstraction.Repository;
@@ -22,25 +21,9 @@ namespace TripYari.Core.Data.Abstraction.Extenstion
             where TCreateItemRequest : IRequest<TCreateItemResponse>
         {
             var createEntity = mapCreateItemFunc(request);
-            var entityCreated = await repo.AddWithReturnAsync(createEntity);
+            await repo.AddAsync(createEntity);
             raiseEventAction?.Invoke(createEntity);
             return await mapResponseFunc(createEntity);
-        }
-
-        public static async Task<TEntity> FindOneAsync<TEntity, Key>(
-             this IRepository<TEntity> repo,
-             Expression<Func<TEntity, bool>> filter,
-             params Expression<Func<TEntity, object>>[] includeProperties)
-             where TEntity : EntityBase<Key>
-             where Key : struct
-        {
-            var dbSet = repo.RepoDbContext.Set<TEntity>() as IQueryable<TEntity>;
-            foreach (var includeProperty in includeProperties)
-            {
-                dbSet = dbSet.Include(includeProperty);
-            }
-
-            return await dbSet.FirstOrDefaultAsync(filter);
         }
 
         public static async Task<TRetrieveItemResponse> RetrieveItemFlowAsync<TEntity, Key, TRetrieveItemResponse>(

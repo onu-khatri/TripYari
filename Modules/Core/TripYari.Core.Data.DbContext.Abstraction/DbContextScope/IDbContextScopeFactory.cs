@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace TripYari.Core.Data.Abstraction.DataContextScope
+namespace TripYari.Core.Data.DbContexts.Abstraction.DataContextScope
 {
     /// <summary>
     /// Convenience methods to create a new ambient DbContextScope. This is the prefered method

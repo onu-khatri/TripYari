@@ -2,8 +2,8 @@
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Data;
 using System.Runtime.ExceptionServices;
-using TripYari.Core.Data.Abstraction.DataContextScope;
-using TripYari.Core.Data.Abstraction.DbContexts;
+using TripYari.Core.Data.DbContexts.Abstraction.DataContextScope;
+using TripYari.Core.Data.DbContexts.Abstraction;
 
 namespace TripYari.Core.Data.DbContextScope
 {
