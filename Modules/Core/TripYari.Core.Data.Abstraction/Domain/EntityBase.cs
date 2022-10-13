@@ -2,13 +2,9 @@
 
 namespace TripYari.Core.Data.Abstraction.Domain
 {
-    public abstract class EntityBase<T> where T : struct       
+    public abstract class EntityBase<T>:Base<EntityBase<T>>  where T : struct       
     {
         protected EntityBase() : this(IdProvider.GenerateId<T>())
-        {
-        }
-
-        protected EntityBase(string Id) : this(IdProvider.GenerateId<T>())
         {
         }
 

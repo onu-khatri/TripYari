@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Linq.Expressions;
 using TripYari.Core.Data.Abstraction.Domain;
 using TripYari.Core.Data.Abstraction.Repository;
+using TripYari.Core.Data.Abstraction.Specifications;
 using TripYari.Core.Data.DbContexts.Abstraction;
 
 namespace TripYari.Core.Data.Repository;
@@ -104,4 +105,8 @@ public abstract class CrudRepository<T, Tkey> : IRepository<T> where T : EntityB
     public void UpdateRange(IEnumerable<T> items) => _commandRepository.UpdateRange(items);
 
     public Task UpdateRangeAsync(IEnumerable<T> items) => _commandRepository.UpdateRangeAsync(items);
+
+    public Task<IReadOnlyList<T>> GetAsync(ISpecification<T> spec) => _queryRepository.GetAsync(spec);
+
+    public Task<int> CountAsync(ISpecification<T> spec) => _queryRepository.CountAsync(spec);
 }

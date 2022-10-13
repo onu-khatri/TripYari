@@ -2,8 +2,10 @@
 using System.Linq.Expressions;
 using TripYari.Core.Data.Abstraction.Domain;
 using TripYari.Core.Data.Abstraction.Repository;
+using TripYari.Core.Data.Abstraction.Specifications;
 using TripYari.Core.Data.DbContexts.Abstraction;
 using TripYari.Core.Data.Extenstion;
+using TripYari.Core.Data.Specifications;
 
 namespace TripYari.Core.Data.Repository
 {
@@ -15,7 +17,12 @@ namespace TripYari.Core.Data.Repository
         {
             _context = context.ReadContext == null ? context.ReadWriteContext.context : context.ReadContext.context;
         }
+
         public IQueryable<T> Queryable => _context.QuerySet<T>();
+
+        public async Task<IReadOnlyList<T>> GetAsync(ISpecification<T> spec) => await ApplySpecification(spec).ToListAsync();
+
+        public async Task<int> CountAsync(ISpecification<T> spec) => await ApplySpecification(spec).CountAsync();
 
         public bool Any() => Queryable.Any();
 
@@ -60,5 +67,10 @@ namespace TripYari.Core.Data.Repository
         public IEnumerable<T> List() => Queryable.ToList();
 
         public async Task<IEnumerable<T>> ListAsync() => await Queryable.ToListAsync().ConfigureAwait(false);
+
+        private IQueryable<T> ApplySpecification(ISpecification<T> spec)
+        {
+            return SpecificationEvaluator<T, Tkey>.GetQuery(_context.Set<T>().AsQueryable(), spec);
+        }
     }
 }

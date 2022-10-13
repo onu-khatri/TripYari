@@ -1,10 +1,15 @@
 using System.Linq.Expressions;
+using TripYari.Core.Data.Abstraction.Specifications;
 
 namespace TripYari.Core.Data.Abstraction.Repository;
 
 public interface IQueryRepository<T> where T : class
 {
     IQueryable<T> Queryable { get; }
+
+    Task<IReadOnlyList<T>> GetAsync(ISpecification<T> spec);
+
+    Task<int> CountAsync(ISpecification<T> spec);
 
     bool Any();
 
